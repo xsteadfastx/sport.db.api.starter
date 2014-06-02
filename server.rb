@@ -113,7 +113,7 @@ get '/event/:key/round/:pos' do |key,pos|
   round.games.each do |g|
     games << { team1_key: g.team1.key, team1_title: g.team1.title, team1_code: g.team1.code,
                team2_key: g.team2.key, team2_title: g.team2.title, team2_code: g.team2.code,
-               play_at: g.play_at.strftime('%Y/%m/%d'),
+               play_at: g.play_at.strftime('%Y-%m-%d %H:%M:%S.%6N'),
                score1:   g.score1,   score2:   g.score2,
                score1ot: g.score1ot, score2ot: g.score2ot,
                score1p:  g.score1p,  score2p:  g.score2p
